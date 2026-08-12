@@ -1,0 +1,15 @@
+{
+  "public": ".",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/home", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about_us_shivam_lifecare/code.html" },
+    { "source": "/departments", "destination": "/our_departments_shivam_lifecare/code.html" },
+    { "source": "/doctors", "destination": "/our_specialists_shivam_lifecare/code.html" },
+    { "source": "/specialists", "destination": "/our_specialists_shivam_lifecare/code.html" },
+    { "source": "/appointment", "destination": "/book_an_appointment_shivam_lifecare/code.html" },
+    { "source": "/book-appointment", "destination": "/book_an_appointment_shivam_lifecare/code.html" },
+    { "source": "/contact", "destination": "/contact_us_shivam_lifecare/code.html" }
+  ]
+}
