@@ -110,25 +110,39 @@
     </style>
 </head>
 <body class="antialiased">
-<!-- TopNavBar -->
-<header class="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm shadow-primary/5 docked full-width top-0 sticky z-50">
+<!-- Top Navigation Bar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md shadow-sm shadow-primary/5 transition-all duration-300" id="navbar">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base w-full max-w-7xl mx-auto">
-<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">
+<a class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-2 shrink-0" href="/">
+<span class="material-symbols-outlined text-[32px] text-primary" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
                 Shivam Lifecare
-            </div>
+            </a>
 <nav class="hidden md:flex items-center gap-6">
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors" href="/">Home</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors" href="/departments">Departments</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors" href="/doctors">Doctors</a>
-<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim border-b-2 border-primary font-bold pb-1 opacity-80 scale-95 transition-transform" href="/about">About</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors" href="/contact">Contact</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/departments">Departments</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/doctors">Doctors</a>
+<a class="text-primary border-b-2 border-primary font-bold pb-1 font-label-caps text-label-caps uppercase" href="/about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/contact">Contact</a>
 </nav>
-<a href="/appointment" class="hidden md:flex items-center justify-center bg-primary text-on-primary rounded-full px-6 py-3 font-label-caps text-label-caps hover:bg-primary-container transition-colors shadow-sm shadow-primary/10">
+<div class="hidden md:flex items-center gap-4">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 active:scale-95 shadow-soft-teal inline-flex items-center justify-center" href="/appointment">
                 Book Appointment
-</a>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
+            </a>
+</div>
+<button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined text-[28px]">menu</span>
 </button>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div class="hidden md:hidden bg-surface border-b border-outline-variant/20 px-margin-mobile py-4 flex flex-col gap-3 shadow-lg" id="mobile-menu">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/departments">Departments</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/doctors">Doctors</a>
+<a class="text-primary font-bold font-label-caps text-label-caps uppercase py-1" href="/about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/contact">Contact</a>
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 text-center mt-2" href="/appointment">
+                Book Appointment
+            </a>
 </div>
 </header>
 <main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-lg">
@@ -264,4 +278,28 @@
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
 </svg>
 </a>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (nav) {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('shadow-md');
+                        nav.classList.replace('bg-surface/90', 'bg-surface/95');
+                    } else {
+                        nav.classList.remove('shadow-md');
+                        nav.classList.replace('bg-surface/95', 'bg-surface/90');
+                    }
+                }
+            });
+
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body></html>

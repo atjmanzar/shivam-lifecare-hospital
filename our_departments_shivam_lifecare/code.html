@@ -174,23 +174,40 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar (Shared Component) -->
-<header class="hidden md:flex justify-between items-center px-margin-desktop py-base w-full max-w-7xl mx-auto docked full-width top-0 sticky z-50 bg-surface/90 dark:bg-surface-dim/90 shadow-sm shadow-primary/5 backdrop-blur-md transition-all duration-300 group">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined fill text-primary text-[32px]">favorite</span>
-<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Shivam Lifecare</span>
-</div>
-<nav class="flex items-center gap-8">
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="/">Home</a>
-<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim border-b-2 border-primary font-bold pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="/departments">Departments</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="/doctors">Doctors</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="/about">About</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="/contact">Contact</a>
+<!-- Top Navigation Bar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md shadow-sm shadow-primary/5 transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base w-full max-w-7xl mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-2 shrink-0" href="/">
+<span class="material-symbols-outlined text-[32px] text-primary" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+                Shivam Lifecare
+            </a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/">Home</a>
+<a class="text-primary border-b-2 border-primary font-bold pb-1 font-label-caps text-label-caps uppercase" href="/departments">Departments</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/doctors">Doctors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/contact">Contact</a>
 </nav>
-<a href="/appointment" class="bg-primary hover:bg-primary/90 text-on-primary font-label-caps text-label-caps py-[16px] px-[24px] rounded-full transition-colors flex items-center gap-2">
-            Book Appointment
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
+<div class="hidden md:flex items-center gap-4">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 active:scale-95 shadow-soft-teal inline-flex items-center justify-center" href="/appointment">
+                Book Appointment
+            </a>
+</div>
+<button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div class="hidden md:hidden bg-surface border-b border-outline-variant/20 px-margin-mobile py-4 flex flex-col gap-3 shadow-lg" id="mobile-menu">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/">Home</a>
+<a class="text-primary font-bold font-label-caps text-label-caps uppercase py-1" href="/departments">Departments</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/doctors">Doctors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/contact">Contact</a>
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 text-center mt-2" href="/appointment">
+                Book Appointment
+            </a>
+</div>
 </header>
 <!-- BottomNavBar (Shared Component Mobile) -->
 <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile pb-sm pt-xs md:hidden shadow-[0_-4px_20px_rgba(42,127,126,0.08)] bg-surface dark:bg-surface-container-highest docked full-width bottom-0 rounded-t-xl">
@@ -370,4 +387,28 @@
             </p>
 </div>
 </footer>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (nav) {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('shadow-md');
+                        nav.classList.replace('bg-surface/90', 'bg-surface/95');
+                    } else {
+                        nav.classList.remove('shadow-md');
+                        nav.classList.replace('bg-surface/95', 'bg-surface/90');
+                    }
+                }
+            });
+
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body></html>

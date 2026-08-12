@@ -110,7 +110,7 @@
 <!-- Top Navigation Bar -->
 <header class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md shadow-sm shadow-primary/5 transition-all duration-300" id="navbar">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base w-full max-w-7xl mx-auto">
-<a class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-2" href="/">
+<a class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-2 shrink-0" href="/">
 <span class="material-symbols-outlined text-[32px] text-primary" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
                 Shivam Lifecare
             </a>
@@ -121,12 +121,25 @@
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/about">About</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/contact">Contact</a>
 </nav>
-<a class="hidden md:inline-flex bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 active:scale-95 shadow-soft-teal" href="/appointment">
+<div class="hidden md:flex items-center gap-4">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 active:scale-95 shadow-soft-teal inline-flex items-center justify-center" href="/appointment">
                 Book Appointment
-</a>
-<button class="md:hidden text-primary">
+            </a>
+</div>
+<button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle navigation menu">
 <span class="material-symbols-outlined text-[28px]">menu</span>
 </button>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div class="hidden md:hidden bg-surface border-b border-outline-variant/20 px-margin-mobile py-4 flex flex-col gap-3 shadow-lg" id="mobile-menu">
+<a class="text-primary font-bold font-label-caps text-label-caps uppercase py-1" href="/">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/departments">Departments</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/doctors">Doctors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase py-1" href="/contact">Contact</a>
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 text-center mt-2" href="/appointment">
+                Book Appointment
+            </a>
 </div>
 </header>
 <!-- Main Content Canvas -->
@@ -371,15 +384,25 @@
             // Navbar scroll effect
             window.addEventListener('scroll', () => {
                 const nav = document.getElementById('navbar');
-                if (window.scrollY > 50) {
-                    nav.classList.add('shadow-md');
-                    nav.classList.replace('bg-surface/90', 'bg-surface/95');
-                } else {
-                    nav.classList.remove('shadow-md');
-                    nav.classList.replace('bg-surface/95', 'bg-surface/90');
+                if (nav) {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('shadow-md');
+                        nav.classList.replace('bg-surface/90', 'bg-surface/95');
+                    } else {
+                        nav.classList.remove('shadow-md');
+                        nav.classList.replace('bg-surface/95', 'bg-surface/90');
+                    }
                 }
             });
-        });
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
     </script>
 <a href="https://wa.me/919250206423?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20or%20need%20help%20related%20to%20an%20appointment." target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 z-50 w-14 h-14 flex items-center justify-center rounded-full shadow-soft-teal transition-transform active:scale-95 animate-pulse" style="background-color: rgb(37, 211, 102);" aria-label="Contact us on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
