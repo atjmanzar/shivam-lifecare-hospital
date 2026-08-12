@@ -1,0 +1,388 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shivam Lifecare Hospital | Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Sora:wght@500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "surface": "#f7faf9",
+                        "surface-container-low": "#f1f4f3",
+                        "on-tertiary-container": "#eeffec",
+                        "tertiary-fixed": "#c7ecc9",
+                        "on-secondary": "#ffffff",
+                        "background": "#f7faf9",
+                        "primary-container": "#2a7f7e",
+                        "inverse-primary": "#85d4d2",
+                        "primary-fixed": "#a1f0ef",
+                        "surface-variant": "#e0e3e2",
+                        "on-error": "#ffffff",
+                        "on-surface": "#181c1c",
+                        "primary": "#006665",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-bright": "#f7faf9",
+                        "on-secondary-container": "#794133",
+                        "surface-container-highest": "#e0e3e2",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb4a3",
+                        "on-secondary-fixed": "#370e05",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#181c1c",
+                        "surface-tint": "#026a69",
+                        "on-tertiary-fixed": "#01210c",
+                        "secondary": "#8a4e40",
+                        "on-primary-fixed-variant": "#00504f",
+                        "on-primary-container": "#e8fffe",
+                        "tertiary-container": "#597b5e",
+                        "outline": "#6e7978",
+                        "on-tertiary-fixed-variant": "#2e4e34",
+                        "surface-container-high": "#e6e9e8",
+                        "surface-container": "#ebeeed",
+                        "on-surface-variant": "#3e4948",
+                        "outline-variant": "#bec9c8",
+                        "secondary-container": "#feb19e",
+                        "on-secondary-fixed-variant": "#6e382b",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d7dbda",
+                        "secondary-fixed": "#ffdad2",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#abd0ae",
+                        "primary-fixed-dim": "#85d4d2",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed": "#002020",
+                        "tertiary": "#416247"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "lg": "48px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "xl": "80px",
+                        "margin-mobile": "20px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "sm": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Sora"],
+                        "headline-sm": ["Sora"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f7faf9; color: #181c1c; font-family: 'Inter', sans-serif; }
+        .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .shadow-soft-teal { box-shadow: 0 8px 32px rgba(42, 127, 126, 0.08); }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md shadow-sm shadow-primary/5 transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base w-full max-w-7xl mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-2" href="/">
+<span class="material-symbols-outlined text-[32px] text-primary" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+                Shivam Lifecare
+            </a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary border-b-2 border-primary font-bold pb-1 font-label-caps text-label-caps uppercase" href="/">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/departments">Departments</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/doctors">Doctors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase" href="/contact">Contact</a>
+</nav>
+<a class="hidden md:inline-flex bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 active:scale-95 shadow-soft-teal" href="/appointment">
+                Book Appointment
+</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main>
+<!-- Hero Section -->
+<section class="relative pt-xl pb-xl px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-lg fade-up visible" id="hero">
+<div class="flex-1 flex flex-col gap-md z-10">
+<div class="inline-flex items-center gap-2 bg-tertiary-fixed/30 text-tertiary-container px-4 py-2 rounded-full w-fit">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-caps text-label-caps uppercase">Trusted Healthcare Excellence</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background">
+                    Compassionate Care for <br><span class="text-primary">Every Journey</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Lead by Dr. Yashika Singh, Shivam Lifecare provides world-class medical expertise with a personal touch in Mau.
+                </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="bg-primary text-on-primary font-body-md text-body-md px-6 py-3 rounded-full hover:bg-surface-tint transition-all shadow-soft-teal inline-flex items-center gap-2 font-semibold" href="#">
+                        Book Appointment
+                        <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+<a class="bg-surface text-primary border border-primary/20 font-body-md text-body-md px-6 py-3 rounded-full hover:bg-primary/5 transition-all inline-flex items-center gap-2 font-semibold" href="#">
+                        Call Now
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+<div class="flex-1 relative w-full h-[400px] md:h-[600px] rounded-[32px] overflow-hidden shadow-soft-teal">
+<img class="w-full h-full object-cover rounded-[32px]" data-alt="Professional medical headshot of Dr. Yashika Singh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq1WizK5qEoAztX6RHY4miqCYgapz04zP2daWlF9sEdZkyCxsLJPIQf2egiHvGgVKp1e5JsymxUoESi4UXgm5EIFoWFUA_MYw0xTa2NRzqQ4bOZwfd7JC8iNX-58UTeuQQ1BV0xh5o-ckl_8IJYQhGjvwnQHD1kcYW80pKrzX4XKpEJ19wNOOYPv0NF8tzrNO4n27e1LFWu4yOZ63psG2kvmR2ODMJ29qnKe4T3_PTyZHVwIeP5A6_tw">
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary-fixed rounded-full blur-3xl opacity-50"></div>
+</div>
+</section>
+<!-- Trust Strip -->
+<section class="py-lg bg-surface-container-low border-y border-outline-variant/20 fade-up">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="flex flex-col items-center gap-2">
+<span class="font-headline-md text-headline-md text-primary">10+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Years Experience</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="font-headline-md text-headline-md text-primary">15+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Specialists</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="font-headline-md text-headline-md text-primary">50k+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Happy Patients</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="font-headline-md text-headline-md text-primary">24/7</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Emergency Care</span>
+</div>
+</div>
+</section>
+<!-- Departments Grid -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto fade-up" id="departments">
+<div class="text-center mb-lg flex flex-col items-center">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Our Departments</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Comprehensive care across multiple specialties, tailored to meet your unique health needs with state-of-the-art facilities.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-[20px] p-8 shadow-soft-teal hover:shadow-[0_12px_40px_rgba(42,127,126,0.12)] transition-shadow duration-300 flex flex-col gap-4 border border-outline-variant/10 group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pregnant_woman</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background group-hover:text-primary transition-colors">IVF &amp; Fertility</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Advanced reproductive technology and compassionate care to help you build your family.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-[20px] p-8 shadow-soft-teal hover:shadow-[0_12px_40px_rgba(42,127,126,0.12)] transition-shadow duration-300 flex flex-col gap-4 border border-outline-variant/10 group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">female</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background group-hover:text-primary transition-colors">Gynaecology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Comprehensive women's health services from routine checkups to specialized treatments.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-[20px] p-8 shadow-soft-teal hover:shadow-[0_12px_40px_rgba(42,127,126,0.12)] transition-shadow duration-300 flex flex-col gap-4 border border-outline-variant/10 group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">child_care</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background group-hover:text-primary transition-colors">Paediatrics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Gentle, expert care for infants, children, and adolescents to ensure healthy development.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-[20px] p-8 shadow-soft-teal hover:shadow-[0_12px_40px_rgba(42,127,126,0.12)] transition-shadow duration-300 flex flex-col gap-4 border border-outline-variant/10 group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary-fixed/50 flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bloodtype</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background group-hover:text-primary transition-colors">Dialysis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Modern renal care units providing safe, comfortable, and effective dialysis treatments.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-[20px] p-8 shadow-soft-teal hover:shadow-[0_12px_40px_rgba(42,127,126,0.12)] transition-shadow duration-300 flex flex-col gap-4 border border-outline-variant/10 group cursor-pointer md:col-span-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stethoscope</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background group-hover:text-primary transition-colors">General Medicine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Primary care and holistic diagnosis for a wide range of adult medical conditions, focusing on prevention and long-term wellness management.</p>
+</div>
+</div>
+</section>
+<!-- Meet Our Doctors -->
+<section class="py-xl bg-surface-container-low px-margin-mobile md:px-margin-desktop fade-up visible" id="doctors">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-2">Meet Our Specialists</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Expertise meets empathy in our dedicated medical team.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase hover:underline underline-offset-4" href="#">
+                        View All Doctors <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Doctor 1 -->
+<div class="flex flex-col md:flex-row gap-6 bg-surface-container-lowest rounded-[24px] p-6 shadow-soft-teal">
+<div class="w-full md:w-48 h-48 md:h-full rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of Dr. Yashika Singh, an Indian female doctor smiling warmly in a bright, modern clinic hallway, wearing a white coat over blue scrubs with a stethoscope around her neck." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrMvmsjFbQtOg5t_2fPd6-0ZhyPE-zkn0Zr_Pg9zze4TEiU5GwxEsOgejwr8Gg8JlwC3TW7KDJF7F_dP4mDeB9JB2YL9K99Vv9s-X-0KSOwRcm-t4G_HZIgmhrUCeCLgrTbQQuDtZtnQS7CmDqPi6tU5bCfJhsLbG0Egm2_JGvXtGpVbt_W-fjuL7DLreK3OEN2yfFtmo_bgj_FZsOSswwguXhXXcrXkBfKnS0tzxWuQeAKjo0JDHvlw">
+</div>
+<div class="flex flex-col justify-center">
+<div class="inline-flex bg-secondary-fixed/30 text-secondary px-3 py-1 rounded-full text-xs font-semibold mb-3 w-fit">Internal Medicine</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-1">Dr. Yashika Singh</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">MD, Internal Medicine</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm border-t border-outline-variant/20 pt-4">Dedicated to comprehensive adult care, preventive medicine, and chronic disease management with a patient-first approach.</p>
+</div>
+</div>
+<!-- Doctor 2 -->
+<div class="flex flex-col md:flex-row gap-6 bg-surface-container-lowest rounded-[24px] p-6 shadow-soft-teal">
+<div class="w-full md:w-48 h-48 md:h-full rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of Dr. Abhinav Singh, an Indian male pediatrician smiling friendly with arms crossed in a brightly lit pediatric ward with colorful decor, wearing a white coat and light blue shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBitmTYM6Pd_r7X_2FkWJyUVXZLQqCpHQJ09drGdQ1sd24Z0UNZ3cEFjb-FVpSaasvVZYHzg1b2gki6lquNF-47gYCFITUP77bjADZRerOm4UxGn1KSUyHPBNJGILn-C5A0MlZQSO8FMiAQh7jMJfCPRTA6uoOUti6Gc8CUccNfWda99SrvB6yxeVs90byfQCA3Wcuo8Rhrhs6mYFSdwqBPUTXph91HNntVv3H62F_Vdmp0MNUoRdrfIg">
+</div>
+<div class="flex flex-col justify-center">
+<div class="inline-flex bg-tertiary-fixed/40 text-tertiary-container px-3 py-1 rounded-full text-xs font-semibold mb-3 w-fit">Paediatrics</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-1">Dr. Abhinav Singh</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">MD, FAAP, Paediatrician</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm border-t border-outline-variant/20 pt-4">Specializing in neonatal care and child development, creating a comforting environment for children and parents alike.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Facilities Strip -->
+<section class="py-lg px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto border-b border-outline-variant/20 fade-up visible">
+<h3 class="font-label-caps text-label-caps text-outline text-center uppercase tracking-widest mb-8">World-Class Facilities</h3>
+<div class="flex flex-wrap justify-center md:justify-between items-center gap-6 md:gap-4 opacity-70">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[24px]">bed</span><span class="font-body-md">Premium Wards</span></div>
+<div class="hidden md:block w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[24px]">water_drop</span><span class="font-body-md">Dialysis Unit</span></div>
+<div class="hidden md:block w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[24px]">science</span><span class="font-body-md">24/7 Diagnostics</span></div>
+<div class="hidden md:block w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[24px]">local_hospital</span><span class="font-body-md">ICU Ambulance</span></div>
+<div class="hidden md:block w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[24px]">medication</span><span class="font-body-md">In-house Pharmacy</span></div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile pb-sm pt-xs md:hidden shadow-[0_-4px_20px_rgba(42,127,126,0.08)] bg-surface dark:bg-surface-container-highest rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-2 scale-95 transition-all w-1/2 mx-2" href="tel:+">
+<span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' 1;">call</span>
+<span class="font-label-caps text-label-caps">Call Now</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-secondary-fixed/20 rounded-full transition-all w-1/2 mx-2" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">chat</span>
+<span class="font-label-caps text-label-caps">Message</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/20 pt-xl pb-32 md:pb-xl mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<a class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-2 mb-2" href="#">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+                    Shivam Lifecare
+                </a>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Providing compassionate, world-class medical care with a focus on holistic wellness.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-sm text-headline-sm text-on-background text-lg">Services</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-all duration-200" href="#">Maternity Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-all duration-200" href="#">Emergency Care</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-all duration-200" href="#">IVF Treatments</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-sm text-headline-sm text-on-background text-lg">Patient Info</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-all duration-200" href="#">Patient Portal</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-all duration-200" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-sm text-headline-sm text-on-background text-lg">Contact</h4>
+<div class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px]">location_on</span> 123 Health Ave, Wellness City</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px]">call</span> +1 (555) 123-4567</p>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-sm text-on-surface-variant">© 2024 Shivam Lifecare Hospital. Designed with care.</p>
+<div class="flex gap-4">
+<!-- Social placeholders -->
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for fade-up animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Trigger hero immediately
+            setTimeout(() => {
+                document.getElementById('hero').classList.add('visible');
+            }, 100);
+            
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    nav.classList.add('shadow-md');
+                    nav.classList.replace('bg-surface/90', 'bg-surface/95');
+                } else {
+                    nav.classList.remove('shadow-md');
+                    nav.classList.replace('bg-surface/95', 'bg-surface/90');
+                }
+            });
+        });
+    </script>
+<a href="https://wa.me/910000000000" target="_blank" class="fixed bottom-8 right-8 z-50 w-14 h-14 flex items-center justify-center rounded-full shadow-soft-teal transition-transform active:scale-95 animate-pulse" style="background-color: rgb(37, 211, 102);" aria-label="Contact us on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.431 5.63 1.432h.006c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.415-8.41z"></path>
+    </svg>
+</a></body></html>

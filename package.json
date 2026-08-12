@@ -1,0 +1,11 @@
+{
+  "name": "shivam-lifecare-hospital",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shivam Lifecare Hospital website - Multispeciality hospital and IVF centre in Mau, UP",
+  "scripts": {
+    "dev": "npx -y serve .",
+    "start": "npx -y serve .",
+    "build": "echo 'Static site ready for deployment'"
+  }
+}
